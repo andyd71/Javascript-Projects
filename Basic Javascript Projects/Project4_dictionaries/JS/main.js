@@ -1,7 +1,7 @@
 function my_Dictionary() {//this creates a function.
     var Foods = { //this creates the variable and below are the items within the dictionary of the variable.
 
-        Biscuit:"Hobnob",
+        Bisuit:"Digestive",
         Cake:"Vanilla Slice",
         Meat:"Chicken",
         Vegetable:"Mushroom",
