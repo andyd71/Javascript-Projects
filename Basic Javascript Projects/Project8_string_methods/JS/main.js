@@ -26,25 +26,7 @@ function lookUp() {//creating a function.
 
 }
 
-function str_Method() {//creating a function.
-    var X = 56;//creating a variable with a number.
-    document.getElementById("Numbers_to_str").innerHTML = X.toString();//displaying the number as a string.
-}
-
-function precision_Method() {//creating a function.
-    var Y = 14532.56748;//creating a variable with a number.
-    document.getElementById("Precision").innerHTML = Y.toPrecision(5);//displaying the number using the toPrecision() method at a specific length.
-
-}
-
-function fix_Method() {//creating a function.
-    var num = 7.57623;//creating a variable with a number.
-    var fix = num.toFixed(3);//creating another variable using the toFixed() method to set the number to a certain number of decimal places.
-    document.getElementById("Fix").innerHTML = fix;//displaying the result.
-}
-
-function value_Method() {//creating a function.
-    var str = "Who's a lucky boy then?";//creating a variable with a string.
-    var res = str.valueOf();//creating another variable with the valueOf() method to revert the string back to its primitive form.
-    document.getElementById("Value").innerHTML = res;//displaying the result.
+function str_Method() {
+    var X = 56;
+    document.getElementById("Numbers_to_str").innerHTML = X.toString();
 }
