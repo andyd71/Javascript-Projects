@@ -30,3 +30,20 @@ function str_Method() {
     var X = 56;
     document.getElementById("Numbers_to_str").innerHTML = X.toString();
 }
+
+function precision_Method() {//creating a function.
+    var Y = 2345.301256;//creating a variable with a number.
+    document.getElementById("Precision").innerHTML = Y.toPrecision(5);//displaying the variable with a number of a specific length using the toFixed method. 
+}
+
+function fixed_Method() {//creating a function.
+    var num = 5.314;//creating a variable with a number.
+    var n = num.toFixed(3);//creating another variable with a number restricted to a number of decimal points.
+    document.getElementById("fixed_Number").innerHTML = n;//displaying the result.
+}
+
+function value_Method() {//creating a function.
+    var str = "Who's a lovely boy then?"//creating a variable with a string.
+    var res = str.valueOf();//creating another variable to revert the string to its primitive form.
+    document.getElementById("value_Number").innerHTML = res;//displaying the result.
+}
