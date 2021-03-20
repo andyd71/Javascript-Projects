@@ -47,3 +47,44 @@ document.write(X);
     document.write("<br>" + X);
 }
 document.write("<br>" + X);
+
+function myFunction(name) {
+    return "Hello " + name;   
+}
+document.getElementById("back").innerHTML = myFunction("Andy");
+
+let phone = {
+    make: "Samsung ",
+    model: "Galaxy S7 ",
+    year: " 2018 ",
+    color: "Silver ",
+    description: function() {
+        return "My phone ia a " + this.make + this.model + "in " + this.color + "from" + this.year;  
+    }
+     
+};
+document.getElementById("Phone_Object").innerHTML = phone.description()
+
+function stop() {
+    var text = "";
+    var i;
+    for (i = 0; i < 5; i++) {
+        if (i === 3) {
+            break;
+        }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("break_function").innerHTML = text;
+}
+
+function cont() {
+    var text = "";
+    var i;
+    for (i = 0; i < 10; i++) {
+        if (i === 3) {
+            continue;
+        }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("continue_function").innerHTML = text;
+}
