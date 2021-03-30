@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="JavaScript/JavaScript_2.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/CSS_1.css"> 
+     
+  </head>
+  <body>
+      <h2>HTML Form</h2>
+
+      <div>
+      <form name="myForm" action="" onsubmit="return validateForm()" method="post"><!--within speech marks put the place you want the form to be sent.-->
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="Your first name"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" placeholder="Your last name"><br>
+          <label for="country">Country</label>
+          <select id="country" name="country">
+              <option value="england">England</option>
+              <option value="scotland">Scotland</option>
+              <option value="wales">Wales</option>
+          </select>
+          <input type="submit" value="Submit">
+
+      </form>
+    </div>
+
+      
+</body>
+</html>
