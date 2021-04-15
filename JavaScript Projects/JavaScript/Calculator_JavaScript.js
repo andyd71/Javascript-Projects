@@ -107,20 +107,20 @@ keys.addEventListener('click', (event) => {
 		return;
 	}
 
-	if (target.classlist.contains('operator')) {
+	if (target.classList.contains('operator')) {
 		Handle_Operator(target.value);
 		Update_Display();
 		return;
 	}
 
-	if (target.classlist.contains('decimal')) {
+	if (target.classList.contains('decimal')) {
 		Input_Decimal(target.value);
 		Update_Display();
 		return;
 
 }
     //ensures that AC clears the numbers from the calculator.
-    if (target.classlist.contains('all-clear')) {
+    if (target.classList.contains('all-clear')) {
 		Calculator_Reset();
 		Update_Display();
 		return;
