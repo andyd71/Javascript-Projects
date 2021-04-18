@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <title>Pizza Drill Demo</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport"> 
+    <script src="Pizza_JavaScript/Pizza.js" defer></script>
     <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css"/>  
      
   </head>
   <body>
   <div id="menuBG">
-  <h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
+  <h1 style="margin:0 0px 0 20px;" class="title" >Pizza Drill Tutorial</h1>
   <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
   <form id="frmMenu">
   <div class="menu left">
@@ -21,6 +21,20 @@
   <input class="size" type="radio" name="Size" value="Extra Large Pizza">Extra Large Pizza<br>
   <input class="size" type="radio" name="Size" value="Small Pizza">Small Pizza<br>
   </div>
+  <div class="menu middle">
+    <h3>Vegetables:</h3>
+    <input class="veg" type="checkbox" name="Veg" value="Onion">Onion<br>
+    <input class="veg" type="checkbox" name="Veg" value="Sweetcorn">Sweetcorn<br>
+    <input class="veg" type="checkbox" name="Veg" value="Olive">Olive<br>
+    <input class="veg" type="checkbox" name="Veg" value="Mushroom">Mushroom<br>
+    <input class="veg" type="checkbox" name="Veg" value="Jalapeno">Jalapeno<br>
+    <input class="veg" type="checkbox" name="Veg" value="Chilli">Chilli<br>
+    <input class="veg" type="checkbox" name="Veg" value="Tomato">Tomato<br>
+    </div>
+    <div id="cart2">
+    <div id="showText2"></div>
+    <div id="totalPrice2"></div>
+    </div>
 
   <div class="menu right">
   <h3>Meats:</h3>
@@ -38,7 +52,7 @@
   </div>
   </form>
   </div>
-  <script src="Pizza_JavaScript/Pizza.js" defer></script>
+  
      
 
       

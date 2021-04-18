@@ -16,14 +16,19 @@ div {
 
 }
 
+.title {
+	padding-left: 90px;
+}
+
 #menuBG {
-	width: 400px;
-	height: 470px;
-	margin: 10px auto; 
+	width: 600px;
+	height: 700px;
+	margin: 10 auto;
+	padding-left: 50px; 
 }
 
 #frmMenu {
-	width: 400px;
+	width: 600px;
 	height: 200px;
 }
 
@@ -32,19 +37,28 @@ div {
 	height: 190px;
 	margin: 0 auto;
 	float: right;
+	
 }
 
 .left {
 	width: 200px;
 	height: 200px;
+	position: relative;
 	float: left;
+}
 
+.middle {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	float: left;
 }
 
 .right {
 	width: 200px;
 	height: 200px;
-	float: right;
+	position: relative;
+	float: left;
 
 }
 
@@ -56,14 +70,13 @@ div {
 }
 
 #cart {
-	top: 0;
-	margin: 0px auto;
+	top: 0;margin: 0px auto;
 	width: 400px;
 	height: 200px;
 }
 
 #btnOrder {
-	margin: 10px 0px 0px 100px;
+	margin: 30px 0px 70px 200px;
 	width: 100px;
 	height: 40px;
 	background-color: darkslategray;

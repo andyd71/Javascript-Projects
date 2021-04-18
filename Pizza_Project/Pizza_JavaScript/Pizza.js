@@ -26,14 +26,44 @@ function getReceipt() {
 	console.log(selectedSize+" = $"+sizeTotal+".00");
 	//these variables will get passed on to each function.
 	getTopping(runningTotal, text1);
+	getVeg(runningTotal,text1);
 
 };
 
-function getTopping(runningTotal, text1) {
+function getVeg(runningTotal,text1) {
+	var vegTotal = 0;
+	var selectedVeg = [];
+	var vegArray = document.getElementsByClassName("veg");
+	for (var k = 0; k < vegArray.length; k++) {
+		if (vegArray[j].checked) {
+			selectedVeg.push(vegArray[k].value);
+			console.log("selected veg item: ("+vegArray[k].value+")");
+			text1 = text1+vegArray[k].value+"<br>";
+		}
+	}
+
+	var vegCount = selectedVeg.length;
+	if (vegCount > 1) {
+		vegTotal = (vegCount - 1)
+	} else {
+		vegTotal = 0;
+	}
+
+	runningTotal = (runningTotal + vegTotal);
+	console.log("total selected veg items: "+vegCount);
+	console.log(toppingCount+" topping - 1 free veg = "+"$"+vegTotal+".00");
+	console.log("veg text1: "+text1);
+	console.log("Purchase Total: "+"$"+runningTotal+".00");
+	document.getElementById("showText").innerHTML=text1;
+	document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+	
+
+
+function getTopping(runningTotal,text1) {
 	var toppingTotal = 0;
 	var selectedTopping = [];
 	var toppingArray = document.getElementsByClassName("toppings");
-	for (var j = 0; j < toppingArray; j++) {
+	for (var j = 0; j < toppingArray.length; j++) {
 		if (toppingArray[j].checked) {
 			selectedTopping.push(toppingArray[j].value);
 			console.log("selected topping item: ("+toppingArray[j].value+")");
@@ -53,7 +83,8 @@ function getTopping(runningTotal, text1) {
 	console.log("topping text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 	document.getElementById("showText").innerHTML=text1;
-	document.getElementById("totalPrice").innerHTML= "<h3>Total: <strong>$"+ runningTotal+" .00"+"
-	</strong></h3>";
+	document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+	
 
+}
 }
