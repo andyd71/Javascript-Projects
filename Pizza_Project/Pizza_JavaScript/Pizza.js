@@ -2,15 +2,15 @@ function getReceipt() {
 	//This initializes our string so it can get passed from function to function,
 	//growing line by line into a full receipt.
 	var text1 = "<h3>You Ordered</h3>";
-	var runningTotal = 0;
+	var runningTotal = 0;//ceating a variable to add up the price of the pizza.
 	var sizeTotal = 0;
 	var sizeArray = document.getElementsByClassName("size");
 	for (var i = 0; i < sizeArray.length; i++) {
 		if (sizeArray[i].checked) {
 			var selectedSize = sizeArray[i].value;
-			text1 = text1+selectedSize+"<br>";
+			text1 = text1+selectedSize+"<br>";//setting [i] as a variable.
 		}
-	}
+	}//using an else if statement to set the conditions.
     if (selectedSize === "Personal Pizza") {
 		sizeTotal = 6;
 	} else if (selectedSize === "Small Pizza") {
@@ -25,41 +25,13 @@ function getReceipt() {
 	runningTotal = sizeTotal;
 	console.log(selectedSize+" = $"+sizeTotal+".00");
 	//these variables will get passed on to each function.
-	getTopping(runningTotal, text1);
-	getVeg(runningTotal,text1);
+	getTopping(runningTotal,text1);
+	
+	
 
 };
 
-function getVeg(runningTotal,text1) {
-	var vegTotal = 0;
-	var selectedVeg = [];
-	var vegArray = document.getElementsByClassName("veg");
-	for (var k = 0; k < vegArray.length; k++) {
-		if (vegArray[j].checked) {
-			selectedVeg.push(vegArray[k].value);
-			console.log("selected veg item: ("+vegArray[k].value+")");
-			text1 = text1+vegArray[k].value+"<br>";
-		}
-	}
-
-	var vegCount = selectedVeg.length;
-	if (vegCount > 1) {
-		vegTotal = (vegCount - 1)
-	} else {
-		vegTotal = 0;
-	}
-
-	runningTotal = (runningTotal + vegTotal);
-	console.log("total selected veg items: "+vegCount);
-	console.log(toppingCount+" topping - 1 free veg = "+"$"+vegTotal+".00");
-	console.log("veg text1: "+text1);
-	console.log("Purchase Total: "+"$"+runningTotal+".00");
-	document.getElementById("showText").innerHTML=text1;
-	document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
-	
-
-
-function getTopping(runningTotal,text1) {
+function getTopping(runningTotal,text1) {//creating a function to set the conditions.
 	var toppingTotal = 0;
 	var selectedTopping = [];
 	var toppingArray = document.getElementsByClassName("toppings");
@@ -76,7 +48,7 @@ function getTopping(runningTotal,text1) {
 		toppingTotal = (toppingCount - 1)
 	} else {
 		toppingTotal = 0;
-	}
+	}//displaying the result.
 	runningTotal = (runningTotal + toppingTotal);
 	console.log("total selected topping items: "+toppingCount);
 	console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00");
@@ -86,5 +58,10 @@ function getTopping(runningTotal,text1) {
 	document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
 	
 
-}
-}
+};
+
+	
+
+
+
+

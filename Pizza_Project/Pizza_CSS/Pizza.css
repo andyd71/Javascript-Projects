@@ -21,7 +21,7 @@ div {
 }
 
 #menuBG {
-	width: 600px;
+	width: 700px;
 	height: 700px;
 	margin: 10 auto;
 	padding-left: 50px; 
@@ -32,10 +32,10 @@ div {
 	height: 200px;
 }
 
-#totalPrice {
+#totalPrice{
 	width: 200px;
 	height: 190px;
-	margin: 0 auto;
+	margin: 20px auto;
 	float: right;
 	
 }
@@ -43,26 +43,29 @@ div {
 .left {
 	width: 200px;
 	height: 200px;
-	position: relative;
+	
 	float: left;
+
 }
 
 .middle {
 	width: 200px;
 	height: 200px;
-	position: relative;
+	
 	float: left;
 }
 
 .right {
 	width: 200px;
 	height: 200px;
-	position: relative;
+	
 	float: left;
 
 }
 
-#showText {
+
+
+#showText  {
 	width: 200px;
 	height: 190px;
 	margin: 0 auto;
@@ -74,6 +77,8 @@ div {
 	width: 400px;
 	height: 200px;
 }
+
+
 
 #btnOrder {
 	margin: 30px 0px 70px 200px;
