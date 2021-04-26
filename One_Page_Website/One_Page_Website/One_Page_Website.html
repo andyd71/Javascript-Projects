@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox</title>
+    
+<link rel="stylesheet" type= "text/css" href="css/One_page_website.css"></link>
+</head>
+<body>
+    <div id="home">
+        <header>
+        <h1>Liverpool fc Premiership Champions 19/20 </h1>
+        <h3>After a 30 year wait the Mighty Reds have finally won the Premiership title</h3>
+        </header>
+        <!--NAV-->
+        
+        </div>
+        <div>
+        <li>
+        <ul>
+        <a href="#gallery"><li>Gallery</li>
+        <a href="#videos"><li>Videos</li>
+        <a href="#subscription"><li>Subscribe</li></a>
+        </ul>
+        </li>
+        </div>
+        <!--END NAV-->
+        <!--HOME-->
+        <div id="home">
+        <p>Liverpool then went on to win the 2019–20 Premier League, winning their first title in thirty years.<br>
+         The club set multiple records in the season, including winning the league with seven games remaining making<br>
+         it the earliest any team has ever won the title, [56] amassing a club record 99 points, and achieving a <br>
+         joint-record 32 wins in a top flight season.</p>
+         </div>
+         <!--END HOME-->
+         <!--GALLERY-->
+        
+         <h2 style="text-align: center">Lightbox</h2>
+        
+         <div class="row">
+             <div class="column">
+                 <img src="images/lfc1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+             </div>
+             <div class="column">
+                <img src="images/lfc2.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc3.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc4.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc5.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc6.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc7.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc8.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="images/lfc9.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+         </div>
+        
+         <div id="myModal" class="modal">
+             <span class="close cursor" onclick="closeModal()">&times;</span>
+             <div class="modal-content">
+                 <div class="mySlides">
+                     <div class="numbertext">1/9</div>
+                        <img src="images/lfc1.jpeg" style="width:100%">       
+                 </div>
+                 <div class="mySlides">
+                    <div class="numbertext">2/9</div>
+                       <img src="images/lfc2.jpeg" style="width:100%">      
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3/9</div>
+                       <img src="images/lfc3.jpeg" style="width:100%">       
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4/9</div>
+                       <img src="images/lfc4.jpeg" style="width:100%">      
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5/9</div>
+                       <img src="images/lfc5.jpeg" style="width:100%">       
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6/9</div>
+                       <img src="images/lfc6.jpeg" style="width:100%">       
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">7/9</div>
+                       <img src="images/lfc7.jpeg" style="width:100%">       
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">8/9</div>
+                       <img src="images/lfc8.jpeg" style="width:100%">       
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">9/9</div>
+                       <img src="images/lfc9.jpeg" style="width:100%">       
+                </div>
+        
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+        
+                <div class="column">
+                <img class="demo cursor" src="images/lfc1.jpeg" onclick="currentSlide(1)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc2.jpeg" onclick="currentSlide(2)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc3.jpeg" onclick="currentSlide(3)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc4.jpeg" onclick="currentSlide(4)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc5.jpeg" onclick="currentSlide(5)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc6.jpeg" onclick="currentSlide(6)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc7.jpeg" onclick="currentSlide(7)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc8.jpeg" onclick="currentSlide(8)" alt="Liverpool pic">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/lfc9.jpeg" onclick="currentSlide(9)" alt="Liverpool pic">
+                </div>
+             </div>
+         </div>
+         
+         <!--END GALLERY-->
+         <!--VIDEO-->
+         
+        <!--END VIDEO-->
+        <!--SUBSCRIPTION-->
+        <div id="subscription">
+        <p>If you would like to subscribe to my Liverpool fc website, please fill in your details below</p>
+        
+        <form action="" method="post">
+        <input class="subscription" type="text" value="First name">
+        <input class="subscription" type="text" value="Last name">
+        <input class="subscription" type="text" value="Email address">
+        <input class="subscription" type="text" value="Phone number"><br><br>
+        <label class="terms"><p>Terms and conditions</p></label><br><br>
+        <input type="submit" value="Submit"><br><br>
+        </form>
+        </div>
+        <!--END SUBSCRIPTION-->
+        
+        <!--FOOTER-->
+        <footer>
+        <div>
+        <p>www.andyslfcpage.com&nbsp;|&nbsp;&copy;2016</p>
+        
+        
+        </div>
+        <a href="#home" id="link"><li>Home</li>
+        </footer>
+        <!--END FOOTER-->
+        
+        
+        <script src="JS/one_page_website.js"></script>  
+    
+</body>
+</html>
