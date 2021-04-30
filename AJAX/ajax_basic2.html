@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax basic</title>
+</head>
+<body>
+    <div id="demo"><!--creating an id-->
+        <h2>On ready state change object</h2>
+        <!--creating a button to use a function-->
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <script>
+        function loadDoc() {//creating a function
+            var xhttp = new XMLHttpRequest();//setting up the XML http request object
+            xhttp.onreadystatechange = function() {//defining the ajax response callback method.
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            //send the ajax request for data
+            xhttp.open('GET', 'content2.html', true);
+            xhttp.send();
+        }
+    </script>
+    
+</body>
+</html>
