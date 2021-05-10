@@ -12,20 +12,37 @@
 <body>
       
 <script>
+    //changing the content of the HTML file using jQuery.
  $(document).ready(function(){
      $("html").append(
          "<body>\
             <div id='container'>\
                 <div id='inner'>\
                     <h1>Basic jQuery</h1>\
-                    <p>Paragraph 1</p>\
-                    <p>Paragraph 2</p>\
-                    <p>Paragraph 3</p>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
                 </div>\
             </div>\
         </body>"
      );
-    });  
+     $("#2").css({"color":"red"});//assigning a color to paragraph 2.
+     $("#1").mouseenter(function() { //activating an event when the mouse hovered over paragraph 2.
+         alert( "You entered paragraph 1");
+         $("#2").click(function() {//activating an effect when paragraph 2 was clicked.
+         $("#2").fadeOut();
+     $("#3").click(function() {//activating an event when paragraph 3 was clicked. 
+         $("h1").hide();
+     
+     });
+     
+ });
+    }); 
+});
+
+
+
+       
 </script> 
 </body>
 </html>
