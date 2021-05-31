@@ -22,8 +22,19 @@ function add() {
     /*this converts the task input to a JSON string*/
     localStorage.setItem('todo', JSON.stringify(todos));
     document.getElementById("task").value = "";
+    show();
 
     return false;
+}
+function remove() {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+    show();
+
+    return false;
+
 }
 
 /*this functions keeps the tasks permanently displayed on the screen*/
@@ -37,13 +48,20 @@ function show() {
     for (var i = 0; i < todos.length; i++) {
         /*this also displays the task as a list and creates the button with the "x"*/
         html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
+        var buttons = document.getElementsByClassName('remove');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };   
     };
+    
+    
     html += '</ul>';
     /*this displays the task as a list*/
     document.getElementById('todos').innerHTML = html;
- 
+    
 }
 /*this displays the inputted task when the 'Add Item' button is clicked*/
 document.getElementById('add').addEventListener('click', add);
 /*this will keep the inputs displayed permanently on the screen*/
+
 show();
