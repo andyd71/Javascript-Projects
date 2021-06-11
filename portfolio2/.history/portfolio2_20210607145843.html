@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/portfolio2.css">
+</head>
+<body class="Background">
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a><!--This is a new section-->
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()">Contact</a><!--This makes it that our openForm function runs when we click Contact on the nav bar-->
+    </div>
+    <!--Home-->
+    <div id="Home">
+        <br><!--Breaks inserted to add space between nav bar and first heading-->
+        <br>
+
+        <!--Video-->
+        <!--Makes the video play automatically, on a loop and with no sound-->
+        <video autoplay muted loop id="Typing_Video">
+            <source src="videos/Typing.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.<!--Display message if video fails to run-->
+        </video>
+    </div>
+
+    <!--video text-->
+    <div class="Video_Text">
+    <h1>ANDREW DUTTON'S PORTFOLIO WEBSITE</h1>
+    <p>
+        <strong>
+            <center>
+                <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                    <br>No playright, no stage director, no emperor, however powerful, has ever exercised
+                    such absolute authority to arrange a stage<br>
+                    or field of battle and to command such unswervingly dutiful actors or troops.
+                </q>
+                <br>-Joseph Weizenbaum<br>
+                <br>
+                My name is Andrew Dutton. Welcome to my portfolio website.
+                <br>Thank you for stopping by and enjoy!
+            </center>
+        </strong>
+    </p>
+</div>
+
+<!--Slideshow section-->
+<div id="Slideshow">
+    <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+             
+            <div class="mySlides fade">
+                <div class="Slide_Number">1/6</div>
+                <img class="Slide_Show_Images" src="pictures/andy.jpg" style="width: 50%;">
+                <div class="text">Welcome to my profile</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="Slide_Number">2/6</div>
+                <img class="Slide_Show_Images" src="" style="width: 100%;">
+                <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="Slide_Number">3/6</div>
+                <img class="Slide_Show_Images" src="" style="width: 100%;">
+                <div class="text">the popular programming language Python</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="Slide_Number">4/6</div>
+                <img class="Slide_Show_Images" src="" style="width: 100%;">
+                <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="Slide_Number">5/6</div>
+                <img class="Slide_Show_Images" src="" style="width: 100%;">
+                <div class="text">back end development, databases and SQL.</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="Slide_Number">6/6</div>
+                <img class="Slide_Show_Images" src="" style="width: 100%;">
+                <div class="text"><a onclick="openForm()" href="#Contact" style="color: darkcyan;">Contact me now</a></div>
+            </div>
+
+            <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="Next" onclick="plusSlides(1)">&#10095;</a>       
+        </div>
+        <br>
+
+        <div style="text-align:center">
+
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        
+        </div>
+    </div>
+</div>
+
+<!--About section-->
+<div class="Row" id="About">
+    <div class="Column_2"><!--Left column-->
+        <img src="pictures/Development.jpg" alt="Laptop"> 
+    </div>
+    <div class="Column_1"><!--Right column-->
+        <h1>About</h1>
+        <p>I am a budding software developer who loves to code! I also enjoy time with my family, 
+            traveling and meeting new people. <br><br>I am currently studying for a Diploma in Web Development with <a href="https://www.pitman-training.com/" target="_blank">
+             Pitman Training</a> facilitated by<a href="https://www.learncodinganywhere.com" target="_blank"> The Tech Academy.</a> Within the Diploma I am studying coding languages such as HTML, 
+             Javascript, CSS and C+. As I work through the various courses, I am forming a good understanding of each individual language.<a href="#Contact"> Contact</a> me below.</p>
+    </div>
+</div>
+<!--End About section-->
+
+<!--GitHub section-->
+<div class="Row" id="GitHub">
+    <div class="Column_1">
+        <h1>GitHub</h1>
+        <p>You can view my coding projects on my GitHub profile here:<br><a href="https://github.com/andyd71/html_and_CSS"</p>My GitHub Page</a><br><br>
+        <img src="pictures/GitHub2.png" height="300px" width="300px" alt="GitHub"> 
+        <center><a href="" target="_blank"></a></center> 
+
+    </div>
+</div>
+<!--End GitHub section-->
+
+<!--Contact section-->
+<div id="Contact">
+    <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+    <div class="form-popup" id="myForm">
+        <form action="https://formspree.io/anfield250271@hotmail.com" method="POST" class="form-container">
+            <h1>Contact</h1>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Type your name here" name="name" required>
+            <label for="phone"><b>Phone</b></label>
+            <input type="text" placeholder="Enter your phone number here" name="phone" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Type your email address here" name="email" required>
+            <label for="message"><b>Message</b></label>
+            <input type="text" placeholder="Type your message here" name="message" required>
+
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+        </form>
+    </div>
+
+        
+</div>
+    <!--End Contact section-->
+
+    <!--Footer section-->
+    <footer>
+        <footer>
+            <p>
+              <center>Go to my <a href="https://www.linkedin.com/in/andrew-dutton-8122aa1b1/">linkedin</a>page</center><br>
+            </p>
+          </footer>
+
+    </footer>
+
+    <script src="js/portfolio2.js"></script>
+
+
+
+    
+</body>
+</html> 

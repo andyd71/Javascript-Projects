@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/portfolio2.css">
+</head>
+<body class="Background">
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a><!--This is a new section-->
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()">Contact</a><!--This makes it that our openForm function runs when we click Contact on the nav bar-->
+    </div>
+    <!--Home-->
+    <div id="Home">
+        <br><!--Breaks inserted to add space between nav bar and first heading-->
+        <br>
+
+        <!--Video-->
+        <!--Makes the video play automatically, on a loop and with no sound-->
+        <video autoplay muted loop id="Typing_Video">
+            <source src="videos/Typing.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+
+    
+</body>
+</html> 

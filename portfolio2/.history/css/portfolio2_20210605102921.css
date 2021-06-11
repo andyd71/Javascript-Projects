@@ -1,0 +1,59 @@
+/*Affects entire document*/
+html {
+    scroll-behavior: smooth;/*This ensures that the page scrolling is smooth when the nav bar is clicked*/   
+}
+
+body { 
+    margin: 0%;/*This ensures that our site displays all the way to the edge of the browser screen*/
+    opacity: 1;/*This and transition affect the page loading fade in effect*/
+    transition: 3s opacity;/*This causes a 3 second fade in. You can change this if you wish.*/
+    letter-spacing: .2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+}
+
+/*This section contributes to the fade effect for the page that occurs when the page is loaded*/
+body.fade-out {
+    opacity: .1;/*This sets the level of opacity at the start of the page load*/
+    transition: none;
+}
+
+/*Navbar*/
+.Navbar {
+    overflow: hidden; /*This ensures that any content that overflows beyond the boundary of our nav bar is not displayed*/
+    background-color: black;
+    position: fixed;/*This keeps the nav bar at the top of the screen as we scroll*/
+    top: 0;/*This ensures that no space is displayed above the navbar*/
+    width: 100%;/*This makes the nav bar span the entire width of the page*/
+    z-index: 1;/*This ensures other elements don't display over the navbar*/
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+/*Navbar text*/
+.Navbar a {
+    float: left;/*This specifies that the text floats on the left side of the navbar*/
+    display: block;/*This ensures that other text will be displayed on the same line or row
+    instead of a new line*/
+    color: lightskyblue;
+    padding: .75vw 1vw;/*This adds padding around our text*/
+    text-decoration: none;/*This gets rid of the underlines under the text on our navbar*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5vw;
+    text-align: center;
+    position: relative;
+    -webkit-animation: movenavText 5.75s;
+    animation: movenavText 5.75s;
+    letter-spacing: .2vw;
+    
+}
+
+/*the animation effect for moving the navbar in from the top of the screen upon page load*/
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
